@@ -79,9 +79,7 @@ img {
   text-decoration: none;
 }
 
-#landing {
-  background-color: rgba(115, 66, 214, 0.1);
-}
+
 /* HEADER  */
 
 header {
@@ -130,13 +128,73 @@ button:active {
   transform: translateY(1px);
 }
 .btn {
-  background-color: purple;
+  background-color: #7342d6;
   color: white;
   padding: 12px 24px;
   font-size: 20px;
   border-radius: 4px;
   border: none;
 }
+
+.btn__menu{
+    background-color: transparent;
+     font-size: 40px;
+  border: none;
+  color: #7342d6;
+}
+
+.menu__backdrop {
+    position: absolute;
+    background-color: #242424;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   visibility: hidden;
+   opacity: 0;
+   transition: all 300ms ease;
+   
+}
+
+.menu--open .menu__backdrop{
+ visibility: visible;
+ opacity: 1;
+}
+.menu__links {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.menu__list {
+    padding: 32px 0;
+}
+.menu__link {
+color: white;
+font-size: 40px;
+}
+
+
+
+.btn__menu--close {
+  position: absolute;
+    right: 20px;
+    top: 10px;
+    padding: 8px;
+    color: white;
+}
+
+
+   
+
+
+
+
+
 
 /*
 
@@ -146,48 +204,17 @@ Landing
 
 */
 
-.btn__menu{
-    background-color: transparent;
-    font-size: 40px;
-    text-align: center;
-    border: none;
-    color: purple;
+
+#landing {
+  background-color: rgba(115, 66, 214, 0.1);
 }
 
-.menu__backdrop{
-    position: absolute;
-    background-color: #242424;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: center;
-align-items: center;
-display: none;
 
-}
 
-.menu__open .menu__backdrop{
-    display: flex;
-}
-.menu__links{
-   display: flex;
-   flex-direction: column;
-    align-items: center;
-}
 
-.menu__list{
-    padding: 32px 0;
-}
-.btn__menu--close{
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    padding: 8px;
-    color: white ;
-}
+
+
+
 .container {
   padding: 56px 0;
   
@@ -211,6 +238,7 @@ display: none;
 
 #highlights {
   position: relative;
+  max-width: 100vw;
 }
 
 #highlights:before,
@@ -370,6 +398,15 @@ footer{
 
 .footer__link{
     padding: 0 8px;
+}
+
+@media (max-width: 550px) {
+  .nav__links{
+    display: none;
+  }
+.btn__menu{
+  display: block;
+}
 }
 
 
