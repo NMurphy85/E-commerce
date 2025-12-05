@@ -167,7 +167,7 @@ button:active {
 
 .menu--open{
   max-height: 100vh;
-  overflow-y: hidden;
+  overflow-y: scroll;
 }
 .menu__links {
    display: flex;
@@ -425,6 +425,10 @@ footer{
 .book{
   width:50%;
 }
+
+.nav__links{
+    display: none;
+  }
  }
 @media (max-width: 550px) {
   .nav__links{
